@@ -11,4 +11,9 @@ router.post("/", (req, res) => {
   res.status(200).json(req.body);
 });
 
+router.get("/:id", (req, res) => {
+  console.log(req.params);
+  res.send(`ID: ${req.params.title}`);
+});
+
 module.exports = router;
